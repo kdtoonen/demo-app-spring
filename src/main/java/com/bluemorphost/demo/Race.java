@@ -1,29 +1,23 @@
 package com.bluemorphost.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Race {
-    private String id = "";
-    private String raceName = "";
-    private String startDateTime = "";
-    public Race(String id){
-        this.id = id;
-        this.raceName = "Guinea Pig Race 1";
-        this.startDateTime = "2020.02.02 02:02";
 
-    }
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private long id;
 
-    public String getId() {
-        return id;
-    }
+        private String raceName;
+          public String getRaceName() {
+            return raceName;
+        }
 
-    public String getRaceName() {
-        return raceName;
-    }
-
-    public String getStartDateTime() {
-        return startDateTime;
-    }
-
-    private void setRaceDataById(String id){
-
-    }
+        public void setRaceName(String raceName) {
+            this.raceName = raceName;
+        }
 }
