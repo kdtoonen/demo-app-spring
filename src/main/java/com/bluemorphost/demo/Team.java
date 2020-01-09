@@ -10,6 +10,16 @@ public class Team {
 
     private String teamName;
 
+    public String getTeamActivity() {
+        return teamActivity;
+    }
+
+    public void setTeamActivity(String teamActivity) {
+        this.teamActivity = teamActivity;
+    }
+
+    private String teamActivity;
+
     public String getTeamName() {
         return teamName;
     }
