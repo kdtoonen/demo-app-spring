@@ -13,6 +13,7 @@ public class Participant {
     private long id;
 
     private String participantName;
+    private String participantType;
 
 
 
@@ -24,4 +25,11 @@ public class Participant {
         this.participantName = participantName;
     }
 
+    public String getParticipantType() {
+        return participantType;
+    }
+
+    public void setParticipantType(String participantType) {
+        this.participantType = participantType;
+    }
 }
