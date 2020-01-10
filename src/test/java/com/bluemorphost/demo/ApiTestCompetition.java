@@ -25,6 +25,9 @@ public class ApiTestCompetition {
         RestAssured.baseURI = serverName + ":" + serverPort + servicePath;
         response = given().contentType("application/json").body(requestParams.toJSONString()).post();
         Assert.assertEquals(201, response.getStatusCode());
+        Assert.assertEquals("World Championship 2020", response.getBody().jsonPath().getString("competitionName"));
+        Assert.assertEquals("2020-02-02T20:20:20.000", response.getBody().jsonPath().getString("competitionStartDateTime"));
+
         System.out.println(response.getBody().asString());
     }
 }

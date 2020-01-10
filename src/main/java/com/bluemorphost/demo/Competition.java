@@ -11,7 +11,6 @@ public class Competition {
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         private long id;
-
         private String competitionName;
 
         @Temporal(TemporalType.TIMESTAMP)
