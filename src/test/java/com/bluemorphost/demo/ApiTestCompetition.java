@@ -14,6 +14,7 @@ public class ApiTestCompetition {
 
     private String serverName = propertyReader.getPropertyValue("test.server.name");
     private String serverPort = propertyReader.getPropertyValue("test.server.port");
+    @SuppressWarnings("FieldCanBeLocal")
     private Response response;
 
     @Test
@@ -21,7 +22,7 @@ public class ApiTestCompetition {
         JSONObject requestParams = new JSONObject();
         BigListOfStrings bigListOfStrings = new BigListOfStrings();
         String[] lines = bigListOfStrings
-                .populateArrayOfStrings("c://dev-projects/java/demo/src/test/test_resources/japanese_emoticons.txt");
+                .populateArrayOfStrings("c://dev-projects/java/demo/src/test/test_resources/emoji_strings.txt");
         for (String line : lines) {
             requestParams.put("competitionName", line);
             requestParams.put("competitionStartDateTime", "2020-02-02T20:20:20.000");

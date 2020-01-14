@@ -8,5 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface CompetitionRepository extends CrudRepository<Competition, Long> {
 
 
+
 }
 
