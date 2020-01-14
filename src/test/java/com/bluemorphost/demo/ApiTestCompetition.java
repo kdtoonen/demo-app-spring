@@ -22,7 +22,7 @@ public class ApiTestCompetition {
         JSONObject requestParams = new JSONObject();
         BigListOfStrings bigListOfStrings = new BigListOfStrings();
         String[] lines = bigListOfStrings
-                .populateArrayOfStrings("c://dev-projects/java/demo/src/test/test_resources/emoji_strings.txt");
+                .populateArrayOfStrings("c://dev-projects/java/demo/src/test/test_resources/code_related_strings.txt");
         for (String line : lines) {
             requestParams.put("competitionName", line);
             requestParams.put("competitionStartDateTime", "2020-02-02T20:20:20.000");
